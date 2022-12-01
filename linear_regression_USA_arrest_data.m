@@ -23,7 +23,7 @@ for i = 2:length(data.Properties.VariableNames)
     figure
     hist(data.(data.Properties.VariableNames{i}))
     title(data.Properties.VariableNames{i})
-    xlabel("Rate per 100,000 residents")
+    xlabel("Arrests per 100,000 residents")
     ylabel("Frequency")
 end
 
@@ -32,9 +32,9 @@ end
 
 figure
 scatter3(data.Murder, data.Rape, data.Assault)
-xlabel('Murder Rate (per 100,000)')
-ylabel('Rape Rate (per 100,000)')
-zlabel('Assault Rate (per 100,000)')
+xlabel('Murder Arrests (per 100,000)')
+ylabel('Rape Arrests (per 100,000)')
+zlabel('Assault Arrests (per 100,000)')
 
 % =========================================================================
 % LINEAR REGRESSION ANALYSIS
@@ -77,6 +77,6 @@ predicted_values_for_surface = intercept + murder_slope * Murder_for_plot + rape
 % create the model plot
 figure
 surf(Murder_for_plot, Rape_for_plot, predicted_values_for_surface)
-xlabel('Murder Rate (per 100,000)')
-ylabel('Rape Rate (per 100,000)')
-zlabel('Assault Rate (per 100,000)')
+xlabel('Murder Arrests (per 100,000)')
+ylabel('Rape Arrests (per 100,000)')
+zlabel('Assault Arrests (per 100,000)')
