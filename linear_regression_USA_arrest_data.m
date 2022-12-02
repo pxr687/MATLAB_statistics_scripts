@@ -46,7 +46,7 @@ mod = fitlm(data, 'Assault ~ Rape + Murder')
 % DIAGNOSTIC PLOTS
 
 % Checking for the normality of residuals
-raw_residuals = mod.Residuals{:, 1}
+raw_residuals = mod.Residuals{:, 1};
 figure
 hist(raw_residuals)
 xlabel('Residual')
@@ -64,15 +64,15 @@ ylabel('Residuals')
 % plotting the linear regression model as a plane
 
 % get the model coefficients
-intercept = mod.Coefficients.Estimate(1)
-murder_slope = mod.Coefficients.Estimate(2)
-rape_slope = mod.Coefficients.Estimate(3)
+intercept = mod.Coefficients.Estimate(1);
+murder_slope = mod.Coefficients.Estimate(2);
+rape_slope = mod.Coefficients.Estimate(3);
 
 % get the x-y values for the regression plane
-[Murder_for_plot, Rape_for_plot] = meshgrid(data.Murder, data.Rape)
+[Murder_for_plot, Rape_for_plot] = meshgrid(data.Murder, data.Rape);
 
 % get the z values for the regression plane
-predicted_values_for_surface = intercept + murder_slope * Murder_for_plot + rape_slope * Rape_for_plot
+predicted_values_for_surface = intercept + murder_slope * Murder_for_plot + rape_slope * Rape_for_plot;
 
 % create the model plot
 figure
