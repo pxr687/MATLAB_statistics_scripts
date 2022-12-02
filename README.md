@@ -1,3 +1,3 @@
 # MATLAB_statistics_scripts
  
-Statistical analysis demonstration scripts, using MATLAB.
+Statistical analysis scripts, using MATLAB.
