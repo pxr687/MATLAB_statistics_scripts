@@ -61,7 +61,7 @@ ylabel('Residuals')
 % =========================================================================
 % 3D MODEL PLOT
 
-% plotting the linear regression model
+% plotting the linear regression model as a plane
 
 % get the model coefficients
 intercept = mod.Coefficients.Estimate(1)
