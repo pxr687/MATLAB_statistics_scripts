@@ -50,7 +50,7 @@ ind_survived = str2double(string(ind_survived));
 % add the indicator variable to the dataframe
 data.survived_indicator = ind_survived
 
-
+% crate a 3D scatter plot
 figure
 scatter3(data.age, data.fare, data.survived_indicator)
 xlabel('Age')
